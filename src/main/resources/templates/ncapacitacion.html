@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Nueva Capacitacion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link th:href="@{/css/css.css}" rel="stylesheet">
+</head>
+<body>
+<div class="container-fluid">
+<div th:replace="nav :: nav"></div>
+
+
+    <section class="h-100 ">
+        <div class="container py-5 h-100">
+
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col">
+                    <div class="card card-registration my-4 bg-dark">
+                        <div class="row g-0">
+
+                            <div class="col-xxl-6 col-xl-3 col-md-3 d-none d-xl-block">
+                                <img src="https://i.pinimg.com/originals/07/15/7d/07157d9c11ef7f29155d41f17341017b.gif"
+                                     height="2000" width="2000" alt="cosiwis" class="img-fluid"
+                                     Style="height:100%;" />
+                            </div>
+
+                            <div class="col-xxl-6 col-xl-9 col-md-9">
+
+                                <div class="card-body p-md-5 fcn">
+                                    <h3 class="mb-2 text-uppercase">Crear Capacitación</h3>
+
+
+
+                                    <hr>
+
+
+                                    <form th:action="@{/ncapacitacion}" th:object="${ncapacitacion}" method="post" class="form">
+                                        <div Style="display:none;">
+                                            <input type="number" id="identificador" name="identificador"
+                                                    th:field="*{identificador}" />
+                                        </div>
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="rut">RUT Cliente (sin puntos ni digito
+                                                verificador)</label>
+
+                                            <input required min="0" max="99999999" type="number" id="rut" class="form-control form-control-lg"
+                                                   name="rut"  th:field="*{rut}"/>
+
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="dia">Dia de la semana</label>
+
+                                            <select required class="form-select" name="dia" id="dia"
+                                                    th:field="*{dia}" >
+                                                <option value="Lunes">Lunes</option>
+                                                <option value="Martes">Martes</option>
+                                                <option value="Miercoles">Miercoles</option>
+                                                <option value="Jueves">Jueves</option>
+                                                <option value="Viernes">Viernes</option>
+                                                <option value="Sabado">Sabado</option>
+                                                <option value="Domingo">Domingo</option>
+
+
+                                            </select>
+
+                                        </div>
+
+
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="hora">Hora</label>
+
+                                            <input required type="time" id="hora" class="form-control" name="hora"
+                                                   th:field="*{hora}" />
+
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="lugar">Lugar</label>
+
+                                            <input required minlength="10" maxlength="50" type="text" id="lugar"
+                                                   name="lugar" class="form-control form-control-lg"
+                                                   th:field="*{lugar}"/>
+
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="duracion">Duración (minutos)</label>
+
+                                            <input required type="number" id="duracion" name="duracion"
+                                                   maxlength="70" class="form-control form-control-lg"
+                                                   th:field="*{duracion}"/>
+
+                                        </div>
+
+                                        <div class="form-outline mb-4">
+                                            <label class="form-label" for="cAsistentes">Asistentes (maximo 1000)</label>
+
+                                            <input required type="number" id="cAsistentes" name="cantidadDeAsistentes"
+                                                   class="form-control form-control-lg" max="1000"
+                                                   th:field="*{cantidadDeAsistentes}"/>
+
+                                        </div>
+
+                                        <!-- botones -->
+                                        <div class="d-flex justify-content-end pt-3">
+                                            <button type="reset" class="btn btn-dark btn-lg">Reset</button>
+                                            <button type="submit" class="btn btn-light btn-lg ms-2">Enviar</button>
+                                        </div>
+
+                                    </form>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+</div>
+<!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+</body>
+</html>

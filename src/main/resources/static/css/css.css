@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Barcode+39&family=Megrim&family=Righteous&display=swap');
+body {
+
+background-image: url("https://i.pinimg.com/originals/1b/7b/88/1b7b88256d01c592aad6cb1a401ade75.gif");
+background-blend-mode: darken;
+background-color: #212F3C;
+/*font-family: 'Righteous', cursive;*/
+/*font-family: 'Libre Barcode 39', cursive;*/
+font-family: 'Megrim', cursive;
+}
+
+p {
+font-size:16px;
+padding:10px;
+}
+
+.fcn {
+color: crimson;
+}
+
+.bgor {
+background-image: url("https://i.pinimg.com/originals/1b/7b/88/1b7b88256d01c592aad6cb1a401ade75.gif");
+background-blend-mode: darken;
+background-color: #212F3C;
+/*background-color: rgba(220, 20, 60, 0.7);*/
+}
+
+
+.dataTables_filter label {
+  color: white;
+}
+
+.dataTables_filter input {
+  color: white;
+}
+
+.dataTables_length select {
+  color: crimson;
+}
+
+.dataTables_length label {
+  color: white;
+}

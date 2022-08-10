@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>nav</title>
+</head>
+<body>
+
+<div id="nav" th:fragment="nav">
+    <nav class="fixed-top navbar navbar-dark bgor navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand " th:href="@{/}">Accidentados™ </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/contacto}">Contacto</a>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownc" data-bs-toggle="dropdown"
+                           aria-expanded="false">Capacitaciones</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownc">
+
+                            <li class="nav-item">
+                                <a class="dropdown-item" th:href="@{/ncapacitacion}">Crear Capacitacion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="dropdown-item" th:href="@{/capacitaciones}">Listar Capacitaciones</a>
+                            </li>
+                        </ul>
+                    </li>
+
+                    <!-- usuario -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownu" data-bs-toggle="dropdown"
+                           aria-expanded="false">Usuario</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownu">
+
+                            <li class="nav-item">
+                                <a class="dropdown-item" th:href="@{/usuarios/new}">Nuevo Usuario</a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li class="nav-item">
+                                <a class="dropdown-item" th:href="@{/usuarios/list}">Listar Usuarios</a>
+                            </li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <p class="dropdown-item bg-dark text-light">Editar</p>
+                            </li>
+                            <li><a class="dropdown-item"
+                                   th:href="@{/usuarios/listC}">Cliente</a></li>
+                            <li><a class="dropdown-item"
+                                   th:href="@{/usuarios/listP}">Profesional</a>
+                            </li>
+                            <li><a class="dropdown-item"
+                                   th:href="@{/usuarios/listA}">Administrativo</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdown10" data-bs-toggle="dropdown"
+                           aria-expanded="false">Visita a Terreno</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdown10">
+                            <li><a class="dropdown-item" th:href="@{/visitas/list}"> Listar Visitas</a></li>
+                            <li><a class="dropdown-item" th:href="@{/visitas/save}"> Crear Visita</a></li>
+
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+
+                            <li>
+                                <a class="dropdown-item" th:href="@{/checkList}">Check list</a>
+                            </li>
+
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownpa" data-bs-toggle="dropdown"
+                           aria-expanded="false">Pagos</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownpa">
+                            <li><a class="dropdown-item" th:href="@{/pagos/list}"> Listado de Pagos </a></li>
+                            <li><a class="dropdown-item" th:href="@{/pagos/new}"> Nuevo pago</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li class="nav-item">
+                        <a class="nav-link" th:href="@{/login}">login</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>
+
+</body>
+</html>
